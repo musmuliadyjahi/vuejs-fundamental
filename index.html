@@ -12,7 +12,10 @@
 <body>
     <div id="target-list">
         <h1>{{ header.toLocaleUpperCase() }}</h1>
-        <input v-model="newItem" type="text" placeholder="Add daily goal">
+        <div class="add-item-form">
+            <input v-model="newItem" type="text" placeholder="Add an item" @keyup.enter="item.push(newItem)">
+            <button class="btn btn-primary" @click="items.push(newItem)">Save Item</button>
+        </div>
         <ul>
             <li v-for="item in items">{{ item }}</li>
         </ul>
@@ -25,7 +28,7 @@
             data: {
                 header: 'Daily goal list',
                 newItem: '',
-                items: [
+                item: [
                     'Belajar vue js fundamental',
                     'Belajar vue js master class',
                     'Nyicil laporan',
