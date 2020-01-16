@@ -11,7 +11,7 @@
 
 <body>
     <div id="target-list">
-        <h1>{{ header }}</h1>
+        <h1>{{ header.toLocaleUpperCase() }}</h1>
         <input type="text" v-model="header">
     </div>
 
@@ -20,7 +20,7 @@
         var targetList = new Vue({
             el: '#target-list',
             data: {
-                header: 'Mus is ready to do it!'
+                header: 'Daily goal list'
             },
         });
     </script>
