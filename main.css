@@ -6,6 +6,7 @@ div {
   background-color: cadetblue;
   margin-left: 200px;
   margin-right: 200px;
+  height: 100%;
 }
 
 div h1 {
